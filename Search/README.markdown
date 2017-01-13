@@ -41,7 +41,7 @@ System.out.println(obj.search(new Student(1,"Raju"), students));
 
 Since we have the Student with "Raju", we expect the above program to print, true. But it prints **false**. Because if you check the **if** condition in the method, we are using == for comparision.
 
-**==** returns true if and only if both variables refer to the same object. I want to compare my objects based on the content of my Student. How can i do that? **equals** comes to the rescue.
+**==** returns true if and only if both variables refer to the same object. Here, I want to compare my objects based on the content of my Student object. How can i do that? **equals** comes to the rescue. Default equals() method return true if two objects are exactly same i.e. they are pointing to the same memory address. Make sure you are overriding the equals method in Student class.
 ```java
 public boolean search(T key, T[] values) {
 	for (T x: values) {
